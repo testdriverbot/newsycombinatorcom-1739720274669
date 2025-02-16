@@ -1,0 +1,31 @@
+version: 4.2.12
+session: 67b20860801960eacbc3f54f
+steps:
+  - prompt: Click on the "login" link.
+    commands:
+      - command: hover-text
+        text: login
+        description: login link in the top right corner of the page
+        action: click
+      - command: hover-text
+        text: username
+        description: username input field in the login form
+        action: click
+      - command: type
+        text: testuser
+      - command: hover-text
+        text: password
+        description: password input field in the login form
+        action: click
+      - command: type
+        text: testpass
+  - prompt: Click on the "Login" button.
+    commands:
+      - command: hover-text
+        text: login
+        description: login button near the username and password fields
+        action: click
+  - prompt: >-
+      Assert that login is successful and a user-specific page is displayed.  #
+      Use the content of the file from the environment
+    commands: []
