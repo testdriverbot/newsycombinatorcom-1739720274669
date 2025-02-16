@@ -1,0 +1,23 @@
+version: 4.2.12
+session: 67b20859801960eacbc3f54a
+steps:
+  - prompt: Open the webpage.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the webpage loads without errors.
+    commands:
+      - command: assert
+        expect: Example Domain text is visible on the page
+      - command: press-keys
+        keys:
+          - control
+          - l
+      - command: type
+        text: https://news.ycombinator.com
+      - command: press-keys
+        keys:
+          - enter
+      - command: assert
+        expect: Hacker News logo is visible on the page
